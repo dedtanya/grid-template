@@ -1,0 +1,107 @@
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: $font-main;
+    font-size: $font-size;
+
+    overflow-y: scroll;
+
+    text-align: center;
+    letter-spacing: .1em;
+
+    color: $color-gray;
+}
+
+h1
+{
+    font-family: $font-header;
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 1.2em;
+
+    letter-spacing: .08em;
+
+    @include lg-min
+    {
+        font-size: 3.75rem;
+    }
+    @include lg-md
+    {
+        font-size: 2.5rem;
+    }
+    @include md
+    {
+        font-size: 1.875rem;
+    }
+}
+
+a
+{
+    text-decoration: none;
+
+    color: $color-light;
+}
+.btn
+{
+    display: flex;
+
+    transition: background-color .5s;
+    letter-spacing: .1em;
+
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus
+    {
+        background-color: $color-accent;
+    }
+
+    &--light
+    {
+        border: 2px solid $color-light;
+        background-color: rgba($color-light, .1);
+
+        @include lg-min
+        {
+            font-size: 1.125rem;
+
+            min-width: 250px;
+            height: 60px;
+        }
+        @include lg-md
+        {
+            min-width: 200px;
+            height: 50px;
+        }
+        @include md
+        {
+            min-width: 170px;
+            height: 40px;
+        }
+    }
+
+    &--primary
+    {
+        font-size: 1.125rem;
+
+        height: 60px;
+
+        border: 2px solid $color-primary;
+        background-color: rgba($color-primary, .8);
+
+        @include sm-min
+        {
+            min-width: 350px;
+        }
+        @include sm
+        {
+            width: 100%;
+            min-width: auto;
+        }
+    }
+}
