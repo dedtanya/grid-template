@@ -39,12 +39,29 @@ h1
     }
 }
 
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    color: $color-primary;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 51px;
+    font-family: $font-header;
+}
+
 a
 {
     text-decoration: none;
 
     color: $color-light;
 }
+
+p {
+    
+ margin-bottom: 0;
+   
+}
+
 .btn
 {
     display: flex;
