@@ -47,6 +47,15 @@ h2 {
     margin: 0;
     margin-bottom: 56px;
     font-family: $font-header;
+    text-align: left;
+}
+
+h3 {
+    font-family: $font-header;
+    font-size: 1.125rem;
+    letter-spacing: 0.05em;
+    color: $color-gray;
+
 }
 
 a
@@ -59,8 +68,11 @@ a
 p {
     
  margin-bottom: 0;
+ color: $color-gray;
    
 }
+
+
 
 .btn
 {
