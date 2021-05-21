@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.header-menu, .header-content__container {
+.header-menu, .header-content__container, .form__container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -796,6 +796,57 @@ p {
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
+}
+
+.form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #2d3651;
+  position: relative;
+}
+
+.form__container {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  gap: 20px;
+}
+
+.form__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+input {
+  height: 60px;
+  width: 420.5px;
+  font-size: 1.125rem;
+  letter-spacing: .15em;
+  color: #fff;
+  padding-left: 20px;
+  /* border-bottom: 2px solid $color-light; */
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 1.125rem;
+}
+
+.btn--form {
+  height: 60px;
+  width: 420.5px;
+  color: #fff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 576px) {

@@ -1,0 +1,64 @@
+.form {
+padding-top: $gap * 1.5;
+padding-bottom: $gap * 1.5;
+background-color: $color-primary;
+position: relative;
+  
+  
+  &__container
+  {
+    
+    @extend %container;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: $gap;
+    
+ 
+    
+    
+        
+  }
+
+  &__actions {
+    
+    
+        display: flex;
+
+        justify-content: center;
+        gap: $gap;
+   
+        
+  }
+
+  &-item {
+    
+  }
+  
+
+
+  }
+  
+input {
+  height: 60px;
+  width: 100%;
+  font-size: 1.125rem;
+  letter-spacing: .15em;
+  color: $color-light;
+  padding-left: $gap;
+  border: 2px solid rgba($color-light, 0);
+  border-bottom-color: rgba($color-light, .25)
+  background-color: rgba($color-light, .05);
+
+  transition: background-color 0.5s, border-color 0.5s;
+   
+   
+}
+
+.btn--form {
+  height: 60px;
+  width: 420.5px;
+  color: $color-light;
+  border: 2px solid rgba($color-light, 0);
+  border-bottom-color: 2px solid rgba($color-light, .2);
+  background-color: rgba($color-light, .1);
+}
