@@ -383,7 +383,7 @@ h2 {
   color: #2d3651;
   line-height: 1.2em;
   margin: 0;
-  margin-bottom: 51px;
+  margin-bottom: 56px;
   font-family: "Roboto Slab", serif;
 }
 
@@ -753,19 +753,22 @@ p {
 }
 
 .about {
-  height: 699px;
+  position: relative;
+  display: grid;
+  min-height: 100vh;
   background-color: #e5e5e5;
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 122px;
   letter-spacing: 0.055em;
 }
 
 .about__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 271px;
+  height: 100%;
+  max-width: 1340px;
+  margin: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -776,19 +779,23 @@ p {
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: 1.125em;
-  width: 929px;
   text-align: left;
-  height: 499px;
 }
 
-.about__vertical-line {
+.about__content p:first-of-type {
+  position: relative;
+  margin-top: -5px;
+}
+
+.about__content p:first-of-type::after {
+  position: absolute;
+  right: -50px;
+  top: 0;
+  width: 2px;
   height: 200px;
-  width: 1px;
-  background-color: #707070;
-  opacity: 27%;
-  float: right;
-  -ms-flex-item-align: center;
-      align-self: center;
+  content: "";
+  background-color: rgba(99, 117, 136, 0.1);
+  z-index: 2;
 }
 
 .about__image {
@@ -796,11 +803,19 @@ p {
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
+  margin-top: -24px;
+}
+
+.about__image img {
+  max-width: 100%;
+  max-height: 480px;
 }
 
 .form {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: -24px;
+  padding: 30px 0;
+  /*padding-top: -($gap * 1.5);
+padding-bottom: $gap * 1.5;*/
   background-color: #2d3651;
   position: relative;
 }
@@ -823,29 +838,25 @@ p {
 
 input {
   height: 60px;
-  width: 420.5px;
+  width: 100%;
   font-size: 1.125rem;
   letter-spacing: .15em;
   color: #fff;
   padding-left: 20px;
-  /* border-bottom: 2px solid $color-light; */
   border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.05);
-  font-size: 1.125rem;
 }
 
 .btn--form {
   height: 60px;
   width: 420.5px;
   color: #fff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
