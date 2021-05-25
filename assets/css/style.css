@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.header-menu, .header-content__container, .form__container, .posts__container, .footer__container {
+.header-menu, .header-content__container, .about__container, .form__container, .posts__container, .footer__container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -774,10 +774,6 @@ p {
   gap: 100px;
   grid-template-columns: 1fr 271px;
   height: 100%;
-  max-width: 1340px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .about__content {
@@ -806,7 +802,6 @@ p {
   height: 200px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
-  z-index: 2;
 }
 
 .about__image {
@@ -827,12 +822,14 @@ p {
   padding: 30px 0;
   background-color: #2d3651;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form__container {
   grid-template-columns: repeat(3, 1fr);
   display: grid;
-  max-width: 1340px;
   gap: 20px;
 }
 
@@ -973,6 +970,24 @@ input:hover::placeholder {
 
 .post-item {
   background-color: #eeeeee;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.post-item:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.post-item:hover .post-item__caption h3,
+.post-item:hover .post-item__caption p {
+  color: #2d3651;
+}
+
+.post-item:hover .post-item__image img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .post-item__link {
@@ -992,8 +1007,29 @@ input:hover::placeholder {
       align-content: center;
 }
 
+.post-item__caption a {
+  cursor: pointer;
+  background-color: transparent;
+}
+
 .post-item__caption h3 {
   font-family: "Roboto Slab", serif;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  /*&:hover {
+        color: $color-primary;
+      }*/
+}
+
+.post-item__caption p {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  /*&:hover {
+        color: $color-primary;
+        
+      }*/
 }
 
 .post-item__image {
@@ -1008,6 +1044,14 @@ input:hover::placeholder {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  /*&:hover {
+        transform: scale(1.1);
+      }*/
 }
 
 .footer {
@@ -1030,40 +1074,17 @@ input:hover::placeholder {
 .footer__social a {
   display: block;
   padding: 10px;
-  /*transition: color 0.5s;*/
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.footer__social a:hover {
+  color: #d66926;
 }
 
 .footer__social .fab {
   font-size: 36px;
-}
-
-.fab {
-  font-weight: 400;
-}
-
-.fab {
-  font-family: "Font Awesome 5 Brands";
-  letter-spacing: normal;
-}
-
-.fa-facebook-square:before {
-  content: "\f082";
-}
-
-.fa-google-plus-square:before {
-  content: "\f0d4";
-}
-
-.fa-twitter-square:before {
-  content: "\f081";
-}
-
-.fa-pinterest-square:before {
-  content: "\f0d3";
-}
-
-.fa-flickr:before {
-  content: "\f16e";
 }
 
 .footer__social::after {
@@ -1086,6 +1107,32 @@ input:hover::placeholder {
   letter-spacing: 0.05em;
   color: #e5e5e5;
   font-weight: 700;
+}
+
+.fab {
+  font-weight: 400;
+  font-family: "Font Awesome 5 Brands";
+  letter-spacing: normal;
+}
+
+.fa-facebook-square:before {
+  content: "\f082";
+}
+
+.fa-google-plus-square:before {
+  content: "\f0d4";
+}
+
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+
+.fa-flickr:before {
+  content: "\f16e";
 }
 
 @media (min-width: 576px) {

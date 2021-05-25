@@ -1,57 +1,37 @@
 .form {
   margin-top: -90px;
   padding: 30px 0;
-  
-
   background-color: $color-primary;
   position: relative;
+  justify-content: center;
 
   
   
-  &__container
-  {
-    
+  &__container {
     @extend %container;
     grid-template-columns: repeat(3, 1fr);
     display: grid;
-   
-    max-width: 1340px;
-    
     gap: $gap;
-    
- 
-    
-    
-        
   }
 
   &-item {
-    
-    
     display: flex;
-
     justify-content: center;
     
       &__input {
         display: block;
-        
         height: 60px;
         padding-right: 30px;
         padding-left: 30px;
         width: 100%;
         font-size: 1.125rem;
         letter-spacing: .15em;
-        
         border: 2px solid rgba($color-light, 0);
         border-bottom-color: rgba($color-light, .25);
         background-color: rgba($color-light, .05);
-
         transition: background-color 0.5s, border-color 0.5s;
-        
-  
-
+         
         &:hover {
-          
           border: 2px solid rgba($color-light, .2);
           border-bottom-color: $color-light;
           background-color: rgba($color-light, .15);
@@ -82,11 +62,8 @@
 ::placeholder {
   font: 100;
   color: rgba($color-light, .25);
-   
-    
 }
   
 input:hover::placeholder {
   color: rgba($color-light, .51);
-  
 }
