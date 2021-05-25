@@ -51,10 +51,13 @@ h2 {
 }
 
 h3 {
-    font-family: $font-header;
+    
     font-size: 1.125rem;
     letter-spacing: 0.05em;
     color: $color-gray;
+    
+    
+    
 
 }
 
@@ -65,9 +68,7 @@ a
     color: $color-light;
 }
 
-p {
-    
- margin-bottom: 0;
+p {    
  color: $color-gray;
    
 }
@@ -122,6 +123,7 @@ p {
 
         border: 2px solid $color-primary;
         background-color: rgba($color-primary, .8);
+       
 
         @include sm-min
         {

@@ -1,12 +1,14 @@
 .posts {
   padding-top: 100px;
   padding-bottom: 100px;
+
   
 
   
 
   &__container  {
     @extend %container;
+    
     
   }
 
@@ -20,6 +22,10 @@
   }
   
 
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
@@ -35,7 +41,7 @@
 }
 
 .post-item {
-  background-color: blue;
+  background-color: $color-gray-superlight;
 }
 
 .post-item__link {
@@ -46,9 +52,26 @@
 }
 
 .post-item__caption {
+  display: grid;
   font-family: $font-main;
   font-size: $font-size;
   letter-spacing: normal;
   padding: $gap;
+  align-content: center;
    
+}
+
+.post-item__caption h3 {
+font-family: $font-header;
+}
+
+.post-item__image {
+  display: flex;
+  overflow: hidden;
+  background-color: $color-primary;
+}
+
+.post-item__image img {
+  width: 100%;
+  object-fit: cover;
 }

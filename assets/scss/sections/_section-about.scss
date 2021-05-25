@@ -24,11 +24,10 @@
     margin: auto;
     padding-left: $gap;
     padding-right: $gap;
-   
-    
-   
-    
   }
+   
+    
+
 
   &__content {
     
@@ -38,7 +37,9 @@
     
     text-align: left;
     
-    
+    & p {
+      margin-bottom: 0;
+    }
   
     & p:first-of-type {
       position: relative;
